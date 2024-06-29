@@ -16,7 +16,6 @@ usage(){
 
 build_image(){
 	docker build \
-		--no-cache \
 		--build-arg ENTRYPOINT=${ENTRYPOINT} \
 		-t ${IMAGE_NAME} \
          .
