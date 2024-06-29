@@ -1,0 +1,66 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+CONTAINER_NAME="mom-recipes"
+IMAGE_NAME="cenieto/mom-recipes"
+ENTRYPOINT="/app"
+
+usage(){
+	printf "Usage:\n"
+ 	printf "\t build \t\t: Build container.\n"
+ 	printf "\t start \t\t: Deploy container.\n"
+ 	printf "\t stop \t\t: Destroy container.\n"
+ 	printf "\t shell \t\t: Open terminal shell inside container.\n"
+}
+
+build_image(){
+	docker build \
+		--no-cache \
+		--build-arg ENTRYPOINT=${ENTRYPOINT} \
+		-t ${IMAGE_NAME} \
+         .
+}
+
+start_or_stop_container() {
+    local action=$1
+
+    if [[ "${action}" == "start" ]]; then
+	
+		docker rm -f ${CONTAINER_NAME} &> /dev/null # Purge before launch
+		printf "Deploying ${CONTAINER_NAME} container...\n"
+		docker run -d -it \
+			--name "${CONTAINER_NAME}" \
+			-v ${SCRIPT_DIR}:${ENTRYPOINT} \
+			${IMAGE_NAME}
+
+		until [ "`docker inspect -f {{.State.Status}} ${CONTAINER_NAME}`" == "running" ]; do
+			sleep 0.5;
+		done;
+
+	elif [[ "${action}" == "stop" ]]; then
+		docker rm -f ${CONTAINER_NAME} &> /dev/null # Purge before launch
+	else
+		echo "Error: action (allowed values: start, stop) can't be empty."
+	fi
+}
+
+launch_shell(){
+	docker exec -it $CONTAINER_NAME bash
+}
+
+case "$1" in
+
+    build)
+		build_image "${@:2}"
+		;;
+	start | stop)
+        start_or_stop_container "${@:1}"
+		;;
+	shell)
+		launch_shell
+		;;
+        * | -h | help)
+	usage
+		;;
+esac
