@@ -1,0 +1,11 @@
+#
+# Dependencies to build documentation
+mkdocstrings == 0.24.0
+mkdocs-gen-files == 0.5.0
+mkdocs-literate-nav == 0.6.1
+mkdocs-section-index == 0.3.8
+mkdocs-exclude == 1.0.2
+griffe == 0.40.0
+mkdocs-material == 9.5.7
+mkdocs == 1.5.3
+mkdocstrings-python == 1.8.0
