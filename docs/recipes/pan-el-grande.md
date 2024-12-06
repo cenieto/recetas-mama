@@ -5,15 +5,17 @@ La receta va construyendo la masa en varias fases, empezando por el fermento ini
 
 ## Ingredientes
 Porcentajes de ingredientes referidos a la cantidad de harina final.
+
 | Fase | Harina | Agua | Sal |
-|:---: |-------|---|---|
+|:---: |:---:|:---:|:---:|
 | Fase 1 | 10% | 10% | 0% |
 | Fase 2 | 40% | 20% | 0% |
 | Fase 3 | 50% | 35% | 1.8% |
 
 Para 1kg de harina se necesitan los siguientes ingredientes:
+
 | Fase | Harina | Agua | Sal |
-|:---: |-------|---|---|
+|:---: |:---:|:---:|:---:|
 | Fase 1 | 100 | 100 | 0 |
 | Fase 2 | 400 | 200 | 0 |
 | Fase 3 | 500 | 350 | 18 |
