@@ -1,7 +1,0 @@
-site_name: Recetas de Mamá
-theme:
-  name: material  
-plugins:
-  - search
-  - literate-nav:
-      nav_file: navigation.md
