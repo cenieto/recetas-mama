@@ -1,6 +1,6 @@
 # Masa pizza
 
-# Ingredientes
+## Ingredientes
 
 | Ingrediente | 10 personas | 3 personas |
 |---|---|---|
@@ -10,7 +10,7 @@
 | Aceite de oliva | 100 g | 30 g |
 | Agua | 2000 g | 600 g |
 
-# Preparación:
+## Preparación:
 
 Mezclar la harina con el agua y la levadura, mezclar bien. Añadir la sal, amasar. Añadir el aceite, amasar. Se amasa tres veces, a intervalos de 10 minutos. Dejar fermentar 3 horas.
 
