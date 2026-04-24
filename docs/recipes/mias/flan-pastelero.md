@@ -2,16 +2,16 @@
 
 ## Ingredientes
 
-| Ingrediente | Flan de 20 cm de diámetro |
-| --- | ---  |
-| Leche entera | 600 g |
-| Yemas de huevo | 48 g |
-| Huevos enteros | 60 g |
-| Azucar blanco | 40 g |
-| Azucar moreno | 20 g |
-| Maizena | 40 g |
-| Vainilla | 1 vaina |
-| Crema espesa | 100 g |
+| Ingrediente | Flan de 20 cm de diámetro |prueba|
+| --- | ---  |---|
+| Leche entera | 600 g ||
+| Yemas de huevo | 48 g ||
+| Huevos enteros | 60 g ||
+| Azucar blanco | 40 g |50g|
+| Azucar moreno | 20 g ||
+| Maizena | 40 g |30g|
+| Vainilla | 1 vaina ||
+| Crema espesa | 100 g ||
 
 ## Preparación
 
